@@ -3,6 +3,7 @@
 <artistas propietario="WhiteCurriX">
   <artista id="A01">
     <nombre>Yung Beef</nombre>
+    <genero>trap</genero>
     <ciudad>Granada</ciudad>
     <inicio>2013</inicio>
     <anios_activo unidad="anios">13.0</anios_activo>
@@ -10,12 +11,14 @@
   </artista>
   <artista id="A02">
     <nombre>Pimp Flaco</nombre>
+    <genero>trap</genero>
     <ciudad>Barcelona</ciudad>
     <inicio>2015</inicio>
     <anios_activo unidad="anios">11.0</anios_activo>
   </artista>
   <artista id="A03">
     <nombre>PXXR GVNG</nombre>
+    <genero>trap</genero>
     <ciudad>Barcelona</ciudad>
     <inicio>2014</inicio>
     <anios_activo unidad="anios">12.0</anios_activo>

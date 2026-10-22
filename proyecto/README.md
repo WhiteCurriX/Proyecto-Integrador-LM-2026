@@ -17,3 +17,11 @@ He elegido el trap porque es un género que escucho y que ha cambiado mucho la m
 ## Palabra del día
 
 METAS
+
+## UD3 · Estructura HTML
+
+Cosas que le faltan a mi `index.html` según lo visto en clase:
+
+1. El `head` no está completo: el `title` no sigue el formato `Inicio | Nombre del proyecto` y faltan las etiquetas `meta` de `description`, `keywords` y `author`.
+2. El contenido no está organizado en bloques `div` con comentarios y no hay títulos `h3`, así que la jerarquía de títulos se queda corta.
+3. No tiene separadores `hr`, cita `blockquote`, texto preformateado `pre`, entidades HTML ni pie de página con `&copy;`.

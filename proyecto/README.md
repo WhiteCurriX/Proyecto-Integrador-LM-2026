@@ -43,3 +43,7 @@ Cosas que le faltan a mi `index.html` según lo visto en clase:
 | historia.html | 0 errores | No hizo falta corregir nada |
 | artistas.html | 0 errores | No hizo falta corregir nada |
 | escena-actual.html | 0 errores | No hizo falta corregir nada |
+
+## UD5 · Tablas y formularios
+
+En `historia.html` voy a añadir una tabla con los momentos clave del trap underground en España, con el año, el artista, lo que pasó y la ciudad. Además crearé `contacto.html` con un formulario para que los visitantes me propongan artistas de la escena que todavía no aparecen en la web.

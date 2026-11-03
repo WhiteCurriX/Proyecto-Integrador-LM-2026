@@ -49,3 +49,25 @@ Cosas que le faltan a mi `index.html` según lo visto en clase:
 ## UD5 · Tablas y formularios
 
 En `historia.html` voy a añadir una tabla con los momentos clave del trap underground en España, con el año, el artista, lo que pasó y la ciudad. Además crearé `contacto.html` con un formulario para que los visitantes me propongan artistas de la escena que todavía no aparecen en la web.
+
+### POST frente a GET
+
+He usado `method="post"` en el formulario de `contacto.html` porque envía datos personales como el correo o el teléfono, y con POST no aparecen en la URL ni se quedan guardados en el historial del navegador.
+
+Así se vería el envío si usara GET:
+
+`contacto.html?nombre=Curro&email=curro%40ejemplo.com&telefono=600123456&ciudad=barcelona&estilos=trap&origen=spotify&mensaje=Es+un+pionero+de+la+escena`
+
+### Validación en validator.w3.org
+
+| Página | Errores del validador | Cómo los he corregido |
+|---|---|---|
+| index.html | 0 errores | No hizo falta corregir nada |
+| historia.html | 0 errores | No hizo falta corregir nada |
+| contacto.html | 0 errores | No hizo falta corregir nada |
+
+### Lo que he aprendido
+
+En esta unidad he aprendido a hacer tablas accesibles con `caption`, `thead`, `tbody`, `tfoot` y `scope`, y a unir celdas con `rowspan` y `colspan` sin que se descuadre la tabla.
+También he aprendido a montar formularios con `fieldset` y `legend`, a usar distintos tipos de controles y a relacionar cada `label` con su campo mediante el `id`.
+Por último, he visto la diferencia entre enviar los datos con GET o con POST y cuándo conviene usar cada uno.

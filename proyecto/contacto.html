@@ -38,6 +38,46 @@
             <input type="tel" id="telefono" name="telefono" maxlength="9" placeholder="600123456">
           </p>
         </fieldset>
+
+        <fieldset>
+          <legend>Tu propuesta</legend>
+          <p>
+            <label for="ciudad">Ciudad del artista:</label>
+            <select id="ciudad" name="ciudad">
+              <option value="barcelona" selected>Barcelona</option>
+              <option value="madrid">Madrid</option>
+              <option value="granada">Granada</option>
+              <option value="canarias">Canarias</option>
+            </select>
+          </p>
+          <p>Estilos que hace:</p>
+          <p>
+            <input type="checkbox" id="estilo-trap" name="estilos" value="trap" checked>
+            <label for="estilo-trap">Trap</label>
+            <input type="checkbox" id="estilo-drill" name="estilos" value="drill">
+            <label for="estilo-drill">Drill</label>
+            <input type="checkbox" id="estilo-dancehall" name="estilos" value="dancehall">
+            <label for="estilo-dancehall">Dancehall</label>
+          </p>
+          <p>¿Dónde lo descubriste?</p>
+          <p>
+            <input type="radio" id="origen-spotify" name="origen" value="spotify">
+            <label for="origen-spotify">Spotify</label>
+            <input type="radio" id="origen-youtube" name="origen" value="youtube">
+            <label for="origen-youtube">YouTube</label>
+            <input type="radio" id="origen-directo" name="origen" value="directo">
+            <label for="origen-directo">En directo</label>
+          </p>
+          <p>
+            <label for="mensaje">¿Por qué debería aparecer en la web?</label>
+            <textarea id="mensaje" name="mensaje" rows="5" cols="40" minlength="20" required></textarea>
+          </p>
+        </fieldset>
+
+        <p>
+          <input type="submit" name="enviar" value="Enviar propuesta">
+          <input type="reset" name="borrar" value="Borrar">
+        </p>
       </form>
     </div>
 

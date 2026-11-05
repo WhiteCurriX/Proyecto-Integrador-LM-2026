@@ -55,7 +55,7 @@ He usado `method="post"` en el formulario de `contacto.html` porque envía datos
 
 Así se vería el envío si usara GET:
 
-`contacto.html?nombre=Curro&email=curro%40ejemplo.com&telefono=600123456&ciudad=barcelona&estilos=trap&origen=spotify&mensaje=Es+un+pionero+de+la+escena`
+`http://127.0.0.1:5500/proyecto/contacto.html?nombre=efwfwefwefe&email=efwfef%40gmail.com&telefono=&ciudad=barcelona&estilos=trap&origen=youtube&mensaje=fwefwefwdfdf+wd+w+dw+dwdwdwwddwd+w+wdw&enviar=Enviar+propuesta#`
 
 ### Validación en validator.w3.org
 
@@ -63,10 +63,10 @@ Así se vería el envío si usara GET:
 |---|---|---|
 | index.html | 0 errores | No hizo falta corregir nada |
 | historia.html | 0 errores | No hizo falta corregir nada |
-| contacto.html | 0 errores | No hizo falta corregir nada |
+| contacto.html | Contacto \| Historia del trap en España | Formulario para proponer artistas del trap underground que aún no aparecen en la web |
 
-### Lo que he aprendido
+### Qué he hecho en esta unidad
 
-En esta unidad he aprendido a hacer tablas accesibles con `caption`, `thead`, `tbody`, `tfoot` y `scope`, y a unir celdas con `rowspan` y `colspan` sin que se descuadre la tabla.
-También he aprendido a montar formularios con `fieldset` y `legend`, a usar distintos tipos de controles y a relacionar cada `label` con su campo mediante el `id`.
-Por último, he visto la diferencia entre enviar los datos con GET o con POST y cuándo conviene usar cada uno.
+He añadido a `historia.html` una tabla con los momentos clave del trap underground entre 2013 y 2016, usando `caption`, `thead`, `tbody`, `tfoot`, `colgroup`, `rowspan` y `colspan`.
+He creado `contacto.html` con un formulario de dos `fieldset` para que los visitantes propongan artistas, con campos de texto, correo, teléfono, desplegable, casillas, botones de radio y área de texto.
+Por último, he enlazado la nueva página desde el menú de `index.html`, la he añadido al mapa del sitio y he validado las páginas en el W3C.

@@ -14,9 +14,8 @@ Historia del trap en España.
 
 He elegido el trap porque es un género que escucho y que ha cambiado mucho la música en español en pocos años. Quiero contar cómo llegó a España, cómo pasó de las escenas locales a ser música de masas y qué artistas fueron marcando cada etapa. Es un tema con mucho contenido, ideal para una web con varias páginas y para una lista de artistas con sus datos.
 
-## Palabra del día
-
-METAS
+## Palabra del día UD5
+DIA
 
 **UD5:** DÍA
 

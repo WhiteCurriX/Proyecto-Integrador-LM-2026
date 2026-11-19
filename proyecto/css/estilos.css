@@ -132,3 +132,14 @@ tfoot th, tfoot td { color: var(--text-muted); }
 .faq details[open] summary::after { transform: rotate(45deg); }
 .faq details p { color: var(--text-muted); margin: var(--esp-1) 0 0; }
 code { font-family: ui-monospace, Consolas, monospace; background: var(--bg-primary); color: var(--accent); padding: .1em .35em; border-radius: 4px; }
+
+/* ---------- Selección de texto e impresión ---------- */
+::selection { background: var(--accent); color: var(--negro-900); }
+
+@media print {
+  body { background: #fff; color: #000; }
+  .cabecera, video, .boton, .botones { display: none; }
+  .tarjeta, .lateral, figure, .formulario { background: none; border-color: #999; }
+  a { color: #000; }
+  a[href^="http"]::after { content: " (" attr(href) ")"; font-size: .8em; }
+}

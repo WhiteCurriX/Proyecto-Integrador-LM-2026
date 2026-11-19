@@ -71,3 +71,11 @@ Así se vería el envío si usara GET:
 En esta unidad he aprendido a hacer tablas accesibles con `caption`, `thead`, `tbody`, `tfoot` y `scope`, y a unir celdas con `rowspan` y `colspan` sin que se descuadre la tabla.
 También he aprendido a montar formularios con `fieldset` y `legend`, a usar distintos tipos de controles y a relacionar cada `label` con su campo mediante el `id`.
 Por último, he visto la diferencia entre enviar los datos con GET o con POST y cuándo conviene usar cada uno.
+
+## Tarea 6-7
+- `index.html`, `historia.html` y `contacto.html` pasados a estructura semántica HTML5
+- Formulario de `contacto.html` mejorado con controles HTML5, `pattern` propios y `<progress>`
+- Base de trap de uso libre en dos formatos (MP4 y WebM), figuras y preguntas frecuentes con `<details>`
+- `css/estilos.css`: hoja de estilos externa
+
+Autor: whitecurrix

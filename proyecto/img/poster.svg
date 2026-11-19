@@ -1,0 +1,7 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <rect width="1280" height="720" fill="#1a1320"/>
+  <circle cx="1040" cy="140" r="220" fill="#3a2350"/>
+  <text x="80" y="400" font-family="Syne, sans-serif" font-weight="800" font-size="120" fill="#f3f2ea">LA BASE</text>
+  <text x="80" y="510" font-family="Syne, sans-serif" font-weight="800" font-size="90" fill="#c5f04a">DEL TRAP</text>
+  <polygon points="1120,560 1120,660 1200,610" fill="#c5f04a"/>
+</svg>

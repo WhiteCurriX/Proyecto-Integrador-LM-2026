@@ -1,93 +1,113 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto | Historia del trap en España</title>
-    <meta name="description" content="Formulario para proponer artistas del trap underground español que todavía no aparecen en la web.">
-    <meta name="keywords" content="contacto, proponer artista, trap español, underground">
-    <meta name="author" content="Curro Romero Diaz">
-  </head>
-  <body>
-    <!-- Cabecera de la página -->
-    <div>
-      <h1>Propón un artista</h1>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto | Historia del trap en España</title>
+  <meta name="description" content="Formulario para proponer artistas del trap underground español que todavía no aparecen en la web.">
+  <meta name="keywords" content="contacto, proponer artista, trap español, underground">
+  <meta name="author" content="whitecurrix">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600&family=Syne:wght@600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header class="cabecera">
+    <a class="logo" href="index.html">TRAP<span>/</span>ESPAÑA</a>
+    <nav aria-label="Navegación principal">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="historia.html">Historia</a></li>
+        <li><a href="artistas.html">Artistas</a></li>
+        <li><a href="escena-actual.html">Escena actual</a></li>
+        <li><a href="contacto.html" aria-current="page">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero hero--corto" aria-labelledby="titulo-contacto">
+      <p class="etiqueta">Contacto</p>
+      <h1 id="titulo-contacto">Propón un artista</h1>
+      <p class="intro">¿Conoces a algún artista de la escena underground que debería estar en esta web? Rellena el formulario y lo tendré en cuenta para las próximas actualizaciones.</p>
+    </section>
+
+    <section class="estado" aria-labelledby="titulo-estado">
+      <h2 id="titulo-estado">Cómo va la web</h2>
       <p>
-        ¿Conoces a algún artista de la escena underground que debería estar en esta web?
-        Rellena el formulario y lo tendré en cuenta para las próximas actualizaciones.
+        <label for="avance">Artistas con ficha completa</label>
+        <progress id="avance" max="10" value="4">4 de 10</progress>
+        <strong>4 / 10</strong>
       </p>
-    </div>
+    </section>
 
-    <hr>
-
-    <!-- Formulario de propuesta -->
-    <div>
-      <form action="#" method="post">
+    <section aria-labelledby="titulo-form">
+      <h2 id="titulo-form">Formulario de propuesta</h2>
+      <form class="formulario" action="#" method="post">
         <fieldset>
           <legend>Tus datos</legend>
-          <p>
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" maxlength="40" required autofocus>
-          </p>
-          <p>
-            <label for="email">Correo electrónico:</label>
-            <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" required>
-          </p>
-          <p>
-            <label for="telefono">Teléfono:</label>
-            <input type="tel" id="telefono" name="telefono" maxlength="9" placeholder="600123456">
-          </p>
+          <p class="campo"><label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" maxlength="40" placeholder="Tu nombre" required autofocus></p>
+          <p class="campo"><label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" required></p>
+          <p class="campo"><label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" maxlength="9" placeholder="600123456" pattern="[6-9][0-9]{8}" title="9 cifras empezando por 6, 7, 8 o 9"></p>
         </fieldset>
 
         <fieldset>
           <legend>Tu propuesta</legend>
-          <p>
-            <label for="ciudad">Ciudad del artista:</label>
+          <p class="campo"><label for="artista">Nombre del artista</label>
+            <input type="text" id="artista" name="artista" placeholder="Ej.: Kaydy Cain" required></p>
+          <p class="campo"><label for="instagram">Instagram del artista</label>
+            <input type="text" id="instagram" name="instagram" placeholder="@usuario" pattern="@[A-Za-z0-9._]{1,30}" title="Empieza por @ y usa de 1 a 30 letras, números, puntos o guiones bajos"></p>
+          <p class="campo"><label for="enlace">Enlace a un tema suyo</label>
+            <input type="url" id="enlace" name="enlace" placeholder="https://www.youtube.com/watch?v=..." required></p>
+          <p class="campo"><label for="ciudad">Ciudad del artista</label>
             <select id="ciudad" name="ciudad">
               <option value="barcelona" selected>Barcelona</option>
               <option value="madrid">Madrid</option>
               <option value="granada">Granada</option>
               <option value="canarias">Canarias</option>
-            </select>
-          </p>
-          <p>Estilos que hace:</p>
-          <p>
-            <input type="checkbox" id="estilo-trap" name="estilos" value="trap" checked>
-            <label for="estilo-trap">Trap</label>
-            <input type="checkbox" id="estilo-drill" name="estilos" value="drill">
-            <label for="estilo-drill">Drill</label>
-            <input type="checkbox" id="estilo-dancehall" name="estilos" value="dancehall">
-            <label for="estilo-dancehall">Dancehall</label>
-          </p>
-          <p>¿Dónde lo descubriste?</p>
-          <p>
-            <input type="radio" id="origen-spotify" name="origen" value="spotify">
-            <label for="origen-spotify">Spotify</label>
-            <input type="radio" id="origen-youtube" name="origen" value="youtube">
-            <label for="origen-youtube">YouTube</label>
-            <input type="radio" id="origen-directo" name="origen" value="directo">
-            <label for="origen-directo">En directo</label>
-          </p>
-          <p>
-            <label for="mensaje">¿Por qué debería aparecer en la web?</label>
-            <textarea id="mensaje" name="mensaje" rows="5" cols="40" minlength="20" required></textarea>
-          </p>
+            </select></p>
+          <p class="campo"><label for="inicio">Año en que empezó</label>
+            <input type="number" id="inicio" name="inicio" min="2010" max="2026" step="1" placeholder="2015"></p>
+          <p class="campo"><label for="descubierto">Cuándo lo descubriste</label>
+            <input type="date" id="descubierto" name="descubierto" min="2013-01-01" max="2026-12-31"></p>
+          <p class="campo"><label for="valoracion">Nota que le das (1–10)</label>
+            <input type="range" id="valoracion" name="valoracion" min="1" max="10" step="1" value="8"></p>
+          <p class="campo"><label for="color">Color que asocias a su música</label>
+            <input type="color" id="color" name="color" value="#c5f04a"></p>
+
+          <fieldset>
+            <legend>Estilos que hace</legend>
+            <p class="opcion"><input type="checkbox" id="estilo-trap" name="estilos" value="trap" checked> <label for="estilo-trap">Trap</label></p>
+            <p class="opcion"><input type="checkbox" id="estilo-drill" name="estilos" value="drill"> <label for="estilo-drill">Drill</label></p>
+            <p class="opcion"><input type="checkbox" id="estilo-dancehall" name="estilos" value="dancehall"> <label for="estilo-dancehall">Dancehall</label></p>
+          </fieldset>
+
+          <fieldset>
+            <legend>¿Dónde lo descubriste?</legend>
+            <p class="opcion"><input type="radio" id="origen-spotify" name="origen" value="spotify"> <label for="origen-spotify">Spotify</label></p>
+            <p class="opcion"><input type="radio" id="origen-youtube" name="origen" value="youtube"> <label for="origen-youtube">YouTube</label></p>
+            <p class="opcion"><input type="radio" id="origen-directo" name="origen" value="directo"> <label for="origen-directo">En directo</label></p>
+          </fieldset>
+
+          <p class="campo ancho-completo"><label for="mensaje">¿Por qué debería aparecer en la web?</label>
+            <textarea id="mensaje" name="mensaje" rows="5" minlength="20" placeholder="Mínimo 20 caracteres" required></textarea></p>
         </fieldset>
 
-        <p>
-          <input type="submit" name="enviar" value="Enviar propuesta">
-          <input type="reset" name="borrar" value="Borrar">
+        <p class="botones">
+          <button class="boton" type="submit" name="enviar" value="enviar">Enviar propuesta</button>
+          <button class="boton boton--secundario" type="reset">Borrar</button>
         </p>
       </form>
-    </div>
+    </section>
+  </main>
 
-    <hr>
-
-    <!-- Pie de página -->
-    <div>
-      <p><a href="index.html">Volver al inicio</a></p>
-      <p>&copy; 2026 Curro Romero Diaz</p>
-      <p>Proyecto de Lenguajes de Marcas &middot; 1º DAM</p>
-    </div>
-  </body>
+  <footer class="pie">
+    <p>&copy; 2026 Curro Romero Diaz · Proyecto de Lenguajes de Marcas &middot; 1º DAM</p>
+    <p id="firma-whitecurrix">© 2026 whitecurrix</p>
+  </footer>
+</body>
 </html>

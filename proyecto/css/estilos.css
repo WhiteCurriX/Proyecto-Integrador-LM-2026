@@ -1,0 +1,118 @@
+﻿/* =========================================================
+   Historia del trap en España · hoja de estilos externa (Tema 7)
+   Concepto: "Editorial underground nocturno"
+   Paleta 60-30-10: negro violáceo / gris hormigón / lima ácido
+   ========================================================= */
+:root {
+  --negro-900: oklch(0.14 0.02 300);
+  --negro-800: oklch(0.19 0.025 300);
+  --gris-400: oklch(0.72 0.01 300);
+  --blanco: oklch(0.96 0.01 100);
+  --lima-500: oklch(0.88 0.21 128);
+
+  --bg-primary: var(--negro-900);
+  --bg-surface: var(--negro-800);
+  --text-main: var(--blanco);
+  --text-muted: var(--gris-400);
+  --accent: var(--lima-500);
+  --borde: oklch(0.96 0.01 100 / 0.12);
+
+  --font-display: 'Syne', system-ui, sans-serif;
+  --font-body: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --text-hero: clamp(2.5rem, 5vw + 1rem, 4.5rem);
+  --text-h2: clamp(1.6rem, 2vw + 1rem, 2.4rem);
+
+  --esp-1: 0.5rem; --esp-2: 1rem; --esp-3: 1.5rem; --esp-4: 2rem; --esp-6: 3rem;
+  --radius-md: 12px;
+  --focus-ring: 2px solid var(--accent);
+  --ancho: min(1120px, 100% - 3rem);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at 85% 0%, oklch(0.3 0.08 300 / 0.5), transparent 45%), var(--bg-primary);
+  color: var(--text-main);
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+h1, h2, h3 { font-family: var(--font-display); line-height: 1.1; margin: 0 0 var(--esp-2); }
+h2 { font-size: var(--text-h2); }
+a { color: var(--accent); }
+img, video { max-width: 100%; height: auto; display: block; }
+
+/* Cabecera y navegación */
+.cabecera {
+  position: sticky; top: 0; z-index: 10;
+  display: flex; flex-wrap: wrap; gap: var(--esp-2);
+  justify-content: space-between; align-items: center;
+  padding: var(--esp-2) max(1.5rem, (100% - 1120px) / 2);
+  background: oklch(0.14 0.02 300 / 0.85);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--borde);
+}
+.logo { font-family: var(--font-display); font-weight: 800; color: var(--text-main); text-decoration: none; letter-spacing: 0.04em; }
+.logo span { color: var(--accent); }
+nav ul { list-style: none; display: flex; flex-wrap: wrap; gap: var(--esp-1) var(--esp-3); margin: 0; padding: 0; }
+nav a { color: var(--text-muted); text-decoration: none; font-weight: 600; padding-block: var(--esp-1); border-bottom: 2px solid transparent; transition: color .2s, border-color .2s; }
+nav a:hover, nav a[aria-current="page"] { color: var(--text-main); border-color: var(--accent); }
+
+/* Contenido */
+main { width: var(--ancho); margin-inline: auto; padding-block: var(--esp-6); display: grid; gap: var(--esp-6); }
+.hero { padding-block: var(--esp-6); max-width: 46rem; }
+.hero--corto { padding-block: var(--esp-2) 0; }
+.hero h1 { font-size: var(--text-hero); }
+.etiqueta { text-transform: uppercase; letter-spacing: .2em; font-size: .8rem; color: var(--accent); margin: 0 0 var(--esp-2); }
+.intro { font-size: 1.15rem; color: var(--text-muted); }
+
+.bloque { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--esp-3); align-items: start; }
+.bloque > :not(article) { grid-column: 1 / -1; }
+.tarjeta { background: var(--bg-surface); border: 1px solid var(--borde); border-radius: var(--radius-md); padding: var(--esp-3); transition: transform .25s ease, border-color .25s; }
+.tarjeta:hover { transform: translateY(-4px); border-color: var(--accent); }
+.tarjeta h3 { font-size: 1.3rem; }
+
+figure { margin: 0 0 var(--esp-2); overflow: hidden; background: var(--bg-primary); border: 1px solid var(--borde); border-radius: var(--radius-md); }
+figure img { width: 100%; }
+figcaption { padding: var(--esp-1) var(--esp-2); font-size: .85rem; color: var(--text-muted); }
+
+.ficha { display: grid; grid-template-columns: max-content 1fr; gap: .25rem var(--esp-2); margin: 0; }
+.ficha dt { color: var(--accent); font-weight: 600; }
+.ficha dd { margin: 0; }
+
+.lateral { border-left: 4px solid var(--accent); padding: var(--esp-3); background: var(--bg-surface); border-radius: 0 var(--radius-md) var(--radius-md) 0; }
+blockquote { margin: 0 0 var(--esp-1); padding-left: var(--esp-2); border-left: 2px solid var(--borde); font-style: italic; }
+
+/* Cronología y tabla */
+.cronologia { list-style: none; margin: 0; padding: 0; }
+.cronologia li { display: grid; grid-template-columns: 4rem 1fr; gap: var(--esp-2); padding-block: var(--esp-1); border-bottom: 1px solid var(--borde); }
+.cronologia time { font-family: var(--font-display); font-weight: 800; color: var(--accent); }
+
+.desplazable { overflow-x: auto; }
+table { width: 100%; min-width: 560px; border-collapse: collapse; font-size: .95rem; }
+caption { text-align: left; font-family: var(--font-display); font-size: 1.1rem; margin-bottom: var(--esp-1); }
+th, td { padding: .6rem .8rem; border: 1px solid var(--borde); text-align: left; vertical-align: top; }
+thead th { background: var(--bg-surface); color: var(--accent); }
+tbody tr:hover { background: oklch(0.96 0.01 100 / 0.04); }
+tfoot th, tfoot td { color: var(--text-muted); }
+
+/* Botón: default, hover, active, focus-visible, disabled */
+.boton { display: inline-block; font: inherit; font-weight: 600; background: var(--accent); color: var(--negro-900); text-decoration: none; padding: var(--esp-1) var(--esp-3); border: 1px solid transparent; border-radius: 999px; cursor: pointer; transition: transform .2s, box-shadow .2s; }
+.boton:hover { transform: translateY(-2px); box-shadow: 0 8px 24px oklch(0.88 0.21 128 / 0.3); }
+.boton:active { transform: scale(.97); }
+.boton:disabled { opacity: .5; cursor: not-allowed; }
+
+/* Pie */
+.pie { width: var(--ancho); margin-inline: auto; padding-block: var(--esp-4); border-top: 1px solid var(--borde); color: var(--text-muted); font-size: .9rem; display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--esp-2); }
+
+/* Accesibilidad */
+:focus-visible { outline: var(--focus-ring); outline-offset: 3px; }
+
+@media (max-width: 600px) {
+  main { padding-block: var(--esp-4); gap: var(--esp-4); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+}
